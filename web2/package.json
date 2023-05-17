@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "web2",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^4.14.0",
     "autoprefixer": "10.4.14",
+    "daisyui": "^2.51.6",
     "next": "13.4.2",
+    "next-themes": "^0.2.1",
     "postcss": "8.4.23",
+    "prisma": "^4.14.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "socket.io-client": "^4.6.1",
