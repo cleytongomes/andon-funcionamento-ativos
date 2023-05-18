@@ -40,17 +40,19 @@ export default function CardEquipamento({children, equipamento, className}) {
     }, []);
 
     return (
-        <div className={`card bg-base-100 shadow-xl ${className}`}>
-            <div className="card-body">
-                <div className='flex'>
-                    <h2 className="text-center card-title text-3xl w-4/5">{children}</h2>
-                    <label className={`swap swap-flip text-3xl w-1/5 ${typeof estado == 'undefined'? 'hidden':''  }`}>
-                        <input type="checkbox" checked={estado} readOnly onChange={() => {}} />
-                        <div className="swap-on">🟢</div>
-                        <div className="swap-off">🔴</div>
-                    </label>
+        <div className={`${className}`}>
+            <div className={`card bg-base-100 shadow-xl`}>
+                <div className="card-body">
+                    <div className='flex'>
+                        <h2 className="text-center card-title text-3xl w-4/5">{children}</h2>
+                        <label className={`swap swap-flip text-3xl w-1/5 ${typeof estado == 'undefined'? 'hidden':''  }`}>
+                            <input type="checkbox" checked={estado} readOnly onChange={() => {}} />
+                            <div className="swap-on">🟢</div>
+                            <div className="swap-off">🔴</div>
+                        </label>
+                    </div>
+                    <h2 className="text-center">TEMPERATURA : {temperatura}°C</h2>
                 </div>
-                <h2 className="text-center">TEMPERATURA : {temperatura}°C</h2>
             </div>
         </div>
     )

@@ -4,13 +4,13 @@ import SwapThema from "@/components/SwapThema";
 
 function Home({ equipamentos }) {
   return (
-    <div className="h-screen">
+    <div className="min-h-screen">
       <h1 className='text-center text-4xl font-bold py-10' >ANDON EQUIPAMENTOS INDUSTRIAIS</h1>
       <SwapThema className='absolute top-0 right-0 p-3' />
       <div className='flex flex-wrap justify-center'>
         {
           equipamentos.map((equipamento) => (
-            <CardEquipamento className='w-full md:w-1/2 lg:w-1/2 xl:w-1/3 mx-2 my-3' key={equipamento.id} equipamento={equipamento}>{equipamento.nome}</CardEquipamento>
+            <CardEquipamento className='w-full sm:w-1/2 md:w-1/3 xl:w-1/3 px-2 py-3' key={equipamento.id} equipamento={equipamento}>{equipamento.nome}</CardEquipamento>
           ))
         }
       </div>
